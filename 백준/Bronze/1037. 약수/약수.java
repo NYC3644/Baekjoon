@@ -6,11 +6,10 @@ public class Main{
         int[] A = new int[N];
         for(int i = 0; i<N; i++){
             A[i] = sc.nextInt();
-            if(max<A[i])
-                max = A[i];
-            if(min>A[i])
-                min = A[i];
+            max = Math.max(max, A[i]);
+            min = Math.min(min, A[i]);
         }
+        sc.close();
         System.out.println(max*min);
     }
 }
